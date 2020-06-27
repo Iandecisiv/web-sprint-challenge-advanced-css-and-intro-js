@@ -139,4 +139,8 @@ button:hover{
     .artist{
         width: 100%;
     }
+    .artists-container{
+        display: flex;
+        flex-direction: column;
+    }
 }
