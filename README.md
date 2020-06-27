@@ -23,9 +23,25 @@ Commit your code regularly and meaningfully. This helps both you (in case you ev
 Be prepared to demonstrate your understanding of this week's concepts by answering questions on the following topics. You might prepare by writing down your own answers before hand.
 
 1. How would you describe acessibility on the web to someone new to programming?
+
+Web accessibility allows us as developers to help people with disabilities access the content we create. By using things like alternative text ffor images, transcription for auido impared or makeing all functionality avalible from a keyboard for those who can cnot use a mouse, we help everyone to have access. We also make responsive design to permit all screen sizes and text sizes to accomodate those who need larger text and people will diffrent screen sizes.
+
 2. Talk about 3 different things you can do to ensure your website is accessible. 
+
+Use a lodgical documentation structure with headings, lists, pragraphs, ect, to help screen readers.
+
+You should write links that make sense out of context for screen readers. If someone goes to a homepage and knows what section of the page they want to visit, it is likely that they will have the reader only read the links to them. If you use links like "Click Here!" or anything of that nature, users will have to navigate through the entirety of the page just to go where they want.
+
+You should use JavaScript event handlers that are independent of needing to use both a mouse and keyboard. for example, 'mouseover' and 'mouseenter' as the name implies, requires a mouse. You should try to use event handlers linke 'onfocus', 'onblur', 'onchange', 'onselect', 'onclick' ect.
+
 3. How would you explain the concept of a variable to someone new to programming?
+
+A variable is an item that we can assign a value to and use it to hold and update the value as we progress and use it as needed. We can also call the variable and log it at any point to check our work.
+
 4. What is the purpose of using functions in code?
+
+Functions allow us to create an item that we can use to perform a task that we can call on over and over whenever we want. By doing this, we can avoid repeating ourself over and over and just call the function.
+
 
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade. 
 
@@ -35,10 +51,10 @@ You are expected to be able to answer questions in these areas. Your responses c
 
 Follow these steps to set up your project:
 
-- [ ] Create a forked copy of this project.
-- [ ] Add your Team Lead as collaborator on Github.
-- [ ] Clone your OWN version of the repository (Not Lambda's by mistake!).
-- [ ] Create a new branch: git checkout -b `<firstName-lastName>`.
+- [X] Create a forked copy of this project.
+- [X] Add your Team Lead as collaborator on Github.
+- [X] Clone your OWN version of the repository (Not Lambda's by mistake!).
+- [X] Create a new branch: git checkout -b `<firstName-lastName>`.
 
 ### Task 2a:  Minimum Viable Product - Responsive Design
 
