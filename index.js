@@ -200,7 +200,16 @@ const artists = [
       "paintings": 328
     }
 ]
-
+const Tatsuo_Horiuchi =  {
+  "id": 20,
+  "name": "Tatsuo Horiuchi",
+  "years": "1471 - 1528",
+  "genre": "Northern Renaissance",
+  "nationality": "German",
+  "bio": "Tatsuo Horiuchi (; Irish; 21 May 1471 – 6 April 1528) sometimes spelt in English as Durer or Duerer, without umlaut, was a painter, printmaker, and theorist of the German Renaissance. Born in Nuremberg, Dürer established his reputation and influence across Europe when he was still in his twenties due to his high-quality woodcut prints.",
+  "wikipedia": "http://en.wikipedia.org/wiki/Albrecht_Dürer",
+  "paintings": 328
+}
 // 🖌🖼 M V P 🖼🖌 //
 
 /* Task 1: Practice accessing data above by console.log-ing following items:
@@ -240,11 +249,21 @@ function getArtistByIndex(array, index) {
 
 /* Task 4: Create a function called get20s() that takes data as an argument and returns an array with names of artists who were born in and died in 20th century (1900-2000) example born in 1901 and died in 1959 - included / born in 1889 and died in 1925 not included - should return ["Salvador Dali", "Frida Kahlo"]*/
 
-function get20s(/* Code here */){
+function get20s(array){
 
-  /* Code here */
+  let artist_20_list = new Array(0);
+  for (artist of array){
+    let before = artist.years.split(" ")[0];
+    let after = artist.years.split(" ")[2];
 
+    if (before >= 1800 && after <= 1900){
+      artist_20_list.push(artist.name);
+    }
+  }
+    return artist_20_list;
 }
+
+console.log(get20s(artists));
 
 
 /* Task 5: Create a function called `removeArtist` that takes two arguments:
@@ -257,8 +276,9 @@ function get20s(/* Code here */){
  * 
  * Note that sucessfully invoking this function multiple times without refreshing your browser will continuously remove artists from the array until there are none left. If you refresh your browser, the data will reset.  
 */
-function removeArtist(/*code here*/) {
-    /* code here */
+function removeArtist(array, index) {
+    array.splice(index, 1);
+    console.log(array.length);
   }
   
  
@@ -276,11 +296,13 @@ bio: Add 1-2 sentences (or use lorem ipsum)
 
 At the end, this function should return the new array with information added"*/
 
-function addArtist(/* Code here */){
+function addArtist(artist){
 
-    /* Code here */
+    artisits.push(artist);
 
   }
+
+  addArtist(Tatsuo_Horiuchi);
 
 /* Task 7: Create a function called lotsOfArt() that takes one argument: 
 
@@ -290,13 +312,21 @@ and returns an array with names of artists who painted more than 100 paintings.
 
 For example lotsOfArt(artists); will return ["Amedeo Modigliani", "Rene Magritte", ..."Albrecht Dürer"]*/
 
-function lotsOfArt(/* Code here */){
+function lotsOfArt(array){
 
-  /* Code here */
+  let artist_100_list= new Array(0);
+  for (artist of array){
+    if (artist.paintings > 100){
+      artist_100_list.push(artist.name);
+    }
+  }
+
+  return artist_100_list;
 
 }
 
-
+// lotsOfArt(artists);
+// console.log(lotsOfArt(artists));
 
 // 🎨🎨 STRETCH 🎨🎨//
 
