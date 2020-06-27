@@ -138,9 +138,18 @@ button:hover{
 @media only screen and (max-width: 500px) {
     .artist{
         width: 100%;
+        padding: 1%;
     }
     .artists-container{
         display: flex;
         flex-direction: column;
     }
+
+    .artist img{
+        margin-left: auto;
+        margin-right: auto;
+        height: 20rem;
+    }
+
+
 }
