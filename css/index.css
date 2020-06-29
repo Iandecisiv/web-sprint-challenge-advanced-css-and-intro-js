@@ -135,6 +135,8 @@ button:hover{
     width:100%;
 }
 
+
+
 @media only screen and (max-width: 500px) {
     .artist{
         width: 100%;
