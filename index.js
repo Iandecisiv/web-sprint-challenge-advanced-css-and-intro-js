@@ -200,7 +200,16 @@ const artists = [
       "paintings": 328
     }
 ]
-
+const Tatsuo_Horiuchi =  {
+  "id": 20,
+  "name": "Tatsuo Horiuchi",
+  "years": "1940 - present",
+  "genre": "Microsoft Excel",
+  "nationality": "Japanese",
+  "bio": "Tatsuo Horiuchi (Japan, 1940 - present) has rendered the subtile details of mountains, cherry blossoms, and dense forests with the most unlikely tool: Microsoft Excel. The 77-year-old illustrator shunned the idea of paying for expensive painting supplies or even a basic drawing program for his computer, saying that he prefers Excel even over Microsoft Paint because it has 'more functions and is easier to use.' Using simple vector drawing tools, developed primarily for graphs and simple shapes, Horiuchi instead draws panoramic scenes of life in rural Japan. - https://www.thisiscolossal.com/2017/12/tatsuo-horiuchi-excel-artist/ ",
+  "Website": "https://pasokonga.com/",
+  "paintings": 328
+}
 // 🖌🖼 M V P 🖼🖌 //
 
 /* Task 1: Practice accessing data above by console.log-ing following items:
@@ -208,11 +217,19 @@ const artists = [
 (1) Name of the first artist (0th index) in the array
 (2) Bio of the third artist (2nd index) in the array */
 
-
+console.log(artists[0].name);
+console.log(artists[2].bio);
 
 /* Task 2: There is a typo in your dataset 😱 The 9th artist, Vincent Van Gogh is currently Vincent Van Dough. Use an array method to fix this issue and console.log() to check your work. */
 
+function fixVincent(){
+  artists[8].name ="Vincent Van Gogh";
+  console.log("Fixed Vincent");
+  console.log(artists[8].name);
+}
 
+fixVincent();
+console.log(artists[8].name);
 
 /* Task 3: Create a function called `getArtistByIndex` that takes two arguments:
  *     (1) artists array
@@ -223,19 +240,30 @@ const artists = [
  * it will return `The artist at index 0 is Amedeo Modigliani`.
 */
 function getArtistByIndex(array, index) {
-    /* code here */
+    return "The artist at index " + index + " is " + array[index].name;
   }
+
+  console.log(getArtistByIndex(artists, 0));
   
-  /**
 
 
 /* Task 4: Create a function called get20s() that takes data as an argument and returns an array with names of artists who were born in and died in 20th century (1900-2000) example born in 1901 and died in 1959 - included / born in 1889 and died in 1925 not included - should return ["Salvador Dali", "Frida Kahlo"]*/
 
-function get20s(/* Code here */){
+function get20s(array){
 
-  /* Code here */
+  let artist_20_list = new Array(0);
+  for (artist of array){
+    let before = artist.years.split(" ")[0];
+    let after = artist.years.split(" ")[2];
 
+    if (before >= 1800 && after <= 1900){
+      artist_20_list.push(artist.name);
+    }
+  }
+    return artist_20_list;
 }
+
+console.log(get20s(artists));
 
 
 /* Task 5: Create a function called `removeArtist` that takes two arguments:
@@ -248,8 +276,9 @@ function get20s(/* Code here */){
  * 
  * Note that sucessfully invoking this function multiple times without refreshing your browser will continuously remove artists from the array until there are none left. If you refresh your browser, the data will reset.  
 */
-function removeArtist(/*code here*/) {
-    /* code here */
+function removeArtist(array, index) {
+    array.splice(index, 1);
+    console.log(array.length);
   }
   
  
@@ -267,11 +296,13 @@ bio: Add 1-2 sentences (or use lorem ipsum)
 
 At the end, this function should return the new array with information added"*/
 
-function addArtist(/* Code here */){
+function addArtist(artist){
 
-    /* Code here */
+    artisits.push(artist);
 
   }
+
+  addArtist(Tatsuo_Horiuchi);
 
 /* Task 7: Create a function called lotsOfArt() that takes one argument: 
 
@@ -281,13 +312,21 @@ and returns an array with names of artists who painted more than 100 paintings.
 
 For example lotsOfArt(artists); will return ["Amedeo Modigliani", "Rene Magritte", ..."Albrecht Dürer"]*/
 
-function lotsOfArt(/* Code here */){
+function lotsOfArt(array){
 
-  /* Code here */
+  let artist_100_list= new Array(0);
+  for (artist of array){
+    if (artist.paintings > 100){
+      artist_100_list.push(artist.name);
+    }
+  }
+
+  return artist_100_list;
 
 }
 
-
+// lotsOfArt(artists);
+// console.log(lotsOfArt(artists));
 
 // 🎨🎨 STRETCH 🎨🎨//
 
@@ -312,20 +351,91 @@ The function should console.log 50 chunks of HTML code that match the structure 
 
 ‼️ You do **NOT** need to get these to display on your page, but you can copy and paste the result into your HTML file if you'd like to see what that would look like. */
 
-function getHTML(/* Code here */){
+// function getHTML(array){
 
-    /* Code here */
+//   let entire_html_output = "";
 
+//   let image_source;
+//   let link_source;
+//   let name_and_bio;
+//   let single_html_output = "";
+
+
+//   for (artist in array) {
+//     image_source = artist.replace(/\s+/g, '-') + ".jpg";
+//     link_source = artist.wikipedia;
+//     name_and_bio = artist.bio;
+//     single_html_output = "<div id= \" artist\"> <div class=\"image\"><img src=\" " + image_source + "\"/></div><div class = \"name\"><a href=\" "+ link_source +" \"> \"+ artist.name +\"</a></div><div class = \"bio\">" + name_and_bio + "\" </div></div>";
+//     entire_html_output = entire_html_output + single_html_output;
+//   }
+
+//   return entire_html_output;
+
+// }
+
+// function getHTML(array){
+
+//   let entire_html_output = "";
+
+//   let image_source;
+//   let link_source;
+//   let name_and_bio;
+//   let artist_name;
+//   let single_html_output = "";
+
+
+//   for (artist in array) {
+//     image_source = artist.name.replace(/\s+/g, '-') + ".jpg";
+//     link_source = artist.wikipedia;
+//     name_and_bio = artist.bio;
+//     artist_name = artist.name;
+//     single_html_output = "<div id= \" artist\"> <div class=\"image\"><img src=\" " + image_source + "\"/></div><div class = \"name\"><a href=\" "+ link_source +" \"> \" "+ artist_name +" \"</a></div><div class = \"bio\">" + name_and_bio + "\" </div></div>";
+//     entire_html_output = entire_html_output + single_html_output;
+//   }
+
+//   return entire_html_output;
+
+// }
+
+function getHTML(array){
+
+  let entire_html_output = "";
+
+  let image_source;
+  let link_source;
+  let name_and_bio;
+  let artist_name;
+  let single_html_output = "";
+
+
+  for (artist of array) {
+    image_source = artist.name + ".jpg";
+    link_source = artist.wikipedia;
+    name_and_bio = artist.bio;
+    artist_name = artist.name;
+    single_html_output = "<div id= \" artist\"> <div class=\"image\"><img src=\" " + image_source + "\"/></div><div class = \"name\"><a href=\" "+ link_source +" \"> \" "+ artist_name +" \"</a></div><div class = \"bio\">" + name_and_bio + "\" </div></div>";
+    entire_html_output = entire_html_output + single_html_output;
   }
+
+  return entire_html_output;
+
+}
 
 
 /* STRETCH 2: Create a function called `randomize` that takes a data array as an argument and returns a the same array in a randomized order. */
 
-function randomize(/* Code here */){
+function randomize(array){
 
-    /* Code here */
-
+    for (var i = array.length - 1; i > 0; i--) {
+    var j = Math.floor(Math.random() * (i + 1));
+    var temp = array[i];
+   array[i] = array[j];
+    array[j] = temp;
   }
+
+  return array;
+
+}
 
 
  /* STRETCH 3: Use advanced array methods (.map, .reduce, .filer) to refactor your MVP code (create an array of all artists born in the 1900s with .filter, for example) */

@@ -23,9 +23,25 @@ Commit your code regularly and meaningfully. This helps both you (in case you ev
 Be prepared to demonstrate your understanding of this week's concepts by answering questions on the following topics. You might prepare by writing down your own answers before hand.
 
 1. How would you describe acessibility on the web to someone new to programming?
+
+Web accessibility allows us as developers to help people with disabilities access the content we create. By using things like alternative text ffor images, transcription for auido impared or makeing all functionality avalible from a keyboard for those who can cnot use a mouse, we help everyone to have access. We also make responsive design to permit all screen sizes and text sizes to accomodate those who need larger text and people will diffrent screen sizes.
+
 2. Talk about 3 different things you can do to ensure your website is accessible. 
+
+Use a lodgical documentation structure with headings, lists, pragraphs, ect, to help screen readers.
+
+You should write links that make sense out of context for screen readers. If someone goes to a homepage and knows what section of the page they want to visit, it is likely that they will have the reader only read the links to them. If you use links like "Click Here!" or anything of that nature, users will have to navigate through the entirety of the page just to go where they want.
+
+You should use JavaScript event handlers that are independent of needing to use both a mouse and keyboard. for example, 'mouseover' and 'mouseenter' as the name implies, requires a mouse. You should try to use event handlers linke 'onfocus', 'onblur', 'onchange', 'onselect', 'onclick' ect.
+
 3. How would you explain the concept of a variable to someone new to programming?
+
+A variable is an item that we can assign a value to and use it to hold and update the value as we progress and use it as needed. We can also call the variable and log it at any point to check our work.
+
 4. What is the purpose of using functions in code?
+
+Functions allow us to create an item that we can use to perform a task that we can call on over and over whenever we want. By doing this, we can avoid repeating ourself over and over and just call the function.
+
 
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade. 
 
@@ -35,17 +51,17 @@ You are expected to be able to answer questions in these areas. Your responses c
 
 Follow these steps to set up your project:
 
-- [ ] Create a forked copy of this project.
-- [ ] Add your Team Lead as collaborator on Github.
-- [ ] Clone your OWN version of the repository (Not Lambda's by mistake!).
-- [ ] Create a new branch: git checkout -b `<firstName-lastName>`.
+- [X] Create a forked copy of this project.
+- [X] Add your Team Lead as collaborator on Github.
+- [X] Clone your OWN version of the repository (Not Lambda's by mistake!).
+- [X] Create a new branch: git checkout -b `<firstName-lastName>`.
 
 ### Task 2a:  Minimum Viable Product - Responsive Design
 
 *Before you jump in, take 10 minutes to review the code that has already been provided for you. Take time to see how the home page was built. During this time, [Review the provided design files](design/). You have been provided all content necessary in the [index.html file](index.html) and basic styling in the [index.css file](css/index.css).*
 
-* [ ] Add a viewport meta tag to the head of your index.html page.
-* [ ] Add responsive breakpoints to your code for 500px such that your styles match the [mobile design file](design/Mobile.png).
+* [X] Add a viewport meta tag to the head of your index.html page.
+* [X] Add responsive breakpoints to your code for 500px such that your styles match the [mobile design file](design/Mobile.png).
 
 ### Task 2b: Minimum Viable Product - JavaScript
 
@@ -55,10 +71,10 @@ Navigate to `index.js` and complete the MVP challenges. Note that you need to sc
 
 After finishing your required elements, you can push your work further. These goals may or may not be things you have learned in this module but they build on the material you just studied. Time allowing, stretch your limits and see if you can deliver on the following optional goals:
 
-* [ ] Website is responsive at multiple breakpoints and looks good in-between breakpoints because student is using responsive units of measurement where appropriate. Student is using most semantic HTML for each element on page and has included ARIA roles where applicable (More research may be required to impliment ARIA roles)  
+* [X] Website is responsive at multiple breakpoints and looks good in-between breakpoints because student is using responsive units of measurement where appropriate. Student is using most semantic HTML for each element on page and has included ARIA roles where applicable (More research may be required to impliment ARIA roles)  
 * [ ] Student demonstrates and can explain a deep understanding of basic programming concepts, when walking Team Lead through the explaination of their code.
 * [ ] Use advanced array methods (.map, .reduce, .filer) to refactor your MVP code (create an array of all artists born in the 1900s with .filter, for example) - do this seperate from your MVP tasks
-* [ ] Add CSS animations
+* [X] Add CSS animations
 
 ## Resources
 
@@ -72,6 +88,6 @@ After finishing your required elements, you can push your work further. These go
 
 Follow these steps for completing your project.
 
-- [ ] Submit a Pull-Request to merge <firstName-lastName> Branch into master (student's  Repo). **Please don't merge your own pull request**
-- [ ] Add your team lead as a reviewer on the pull-request
+- [X] Submit a Pull-Request to merge <firstName-lastName> Branch into master (student's  Repo). **Please don't merge your own pull request**
+- [X] Add your team lead as a reviewer on the pull-request
 - [ ] Your team lead will count the project as complete by merging the branch back into master
