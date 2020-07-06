@@ -373,6 +373,30 @@ The function should console.log 50 chunks of HTML code that match the structure 
 
 // }
 
+// function getHTML(array){
+
+//   let entire_html_output = "";
+
+//   let image_source;
+//   let link_source;
+//   let name_and_bio;
+//   let artist_name;
+//   let single_html_output = "";
+
+
+//   for (artist in array) {
+//     image_source = artist.name.replace(/\s+/g, '-') + ".jpg";
+//     link_source = artist.wikipedia;
+//     name_and_bio = artist.bio;
+//     artist_name = artist.name;
+//     single_html_output = "<div id= \" artist\"> <div class=\"image\"><img src=\" " + image_source + "\"/></div><div class = \"name\"><a href=\" "+ link_source +" \"> \" "+ artist_name +" \"</a></div><div class = \"bio\">" + name_and_bio + "\" </div></div>";
+//     entire_html_output = entire_html_output + single_html_output;
+//   }
+
+//   return entire_html_output;
+
+// }
+
 function getHTML(array){
 
   let entire_html_output = "";
@@ -384,8 +408,8 @@ function getHTML(array){
   let single_html_output = "";
 
 
-  for (artist in array) {
-    image_source = artist.name.replace(/\s+/g, '-') + ".jpg";
+  for (artist of array) {
+    image_source = artist.name + ".jpg";
     link_source = artist.wikipedia;
     name_and_bio = artist.bio;
     artist_name = artist.name;
@@ -396,7 +420,6 @@ function getHTML(array){
   return entire_html_output;
 
 }
-
 
 
 /* STRETCH 2: Create a function called `randomize` that takes a data array as an argument and returns a the same array in a randomized order. */
