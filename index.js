@@ -203,11 +203,11 @@ const artists = [
 const Tatsuo_Horiuchi =  {
   "id": 20,
   "name": "Tatsuo Horiuchi",
-  "years": "1471 - 1528",
-  "genre": "Northern Renaissance",
-  "nationality": "German",
-  "bio": "Tatsuo Horiuchi (; Irish; 21 May 1471 – 6 April 1528) sometimes spelt in English as Durer or Duerer, without umlaut, was a painter, printmaker, and theorist of the German Renaissance. Born in Nuremberg, Dürer established his reputation and influence across Europe when he was still in his twenties due to his high-quality woodcut prints.",
-  "wikipedia": "http://en.wikipedia.org/wiki/Albrecht_Dürer",
+  "years": "1940 - present",
+  "genre": "Microsoft Excel",
+  "nationality": "Japanese",
+  "bio": "Tatsuo Horiuchi (Japan, 1940 - present) has rendered the subtile details of mountains, cherry blossoms, and dense forests with the most unlikely tool: Microsoft Excel. The 77-year-old illustrator shunned the idea of paying for expensive painting supplies or even a basic drawing program for his computer, saying that he prefers Excel even over Microsoft Paint because it has 'more functions and is easier to use.' Using simple vector drawing tools, developed primarily for graphs and simple shapes, Horiuchi instead draws panoramic scenes of life in rural Japan. - https://www.thisiscolossal.com/2017/12/tatsuo-horiuchi-excel-artist/ ",
+  "Website": "https://pasokonga.com/",
   "paintings": 328
 }
 // 🖌🖼 M V P 🖼🖌 //
