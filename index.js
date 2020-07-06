@@ -351,18 +351,52 @@ The function should console.log 50 chunks of HTML code that match the structure 
 
 ‼️ You do **NOT** need to get these to display on your page, but you can copy and paste the result into your HTML file if you'd like to see what that would look like. */
 
-// function getHTML(/* Code here */){
-
-//   I don't know what I am doing here
+// function getHTML(array){
 
 //   let entire_html_output = "";
+
 //   let image_source;
 //   let link_source;
 //   let name_and_bio;
-//   let single_html_output = "<div id= \" artist\"> <div class=\"image\"><img src=\" " + image_source + "\"/></div><div class = \"name\"><a href=\" "+ link_source +" \"> Vincent Van Gogh</a></div><div class = \"bio\">" + name_and_bio + "\" </div></div>";
+//   let single_html_output = "";
+
+
+//   for (artist in array) {
+//     image_source = artist.replace(/\s+/g, '-') + ".jpg";
+//     link_source = artist.wikipedia;
+//     name_and_bio = artist.bio;
+//     single_html_output = "<div id= \" artist\"> <div class=\"image\"><img src=\" " + image_source + "\"/></div><div class = \"name\"><a href=\" "+ link_source +" \"> \"+ artist.name +\"</a></div><div class = \"bio\">" + name_and_bio + "\" </div></div>";
+//     entire_html_output = entire_html_output + single_html_output;
+//   }
 
 //   return entire_html_output;
-//   }
+
+// }
+
+function getHTML(array){
+
+  let entire_html_output = "";
+
+  let image_source;
+  let link_source;
+  let name_and_bio;
+  let artist_name;
+  let single_html_output = "";
+
+
+  for (artist in array) {
+    image_source = artist.name.replace(/\s+/g, '-') + ".jpg";
+    link_source = artist.wikipedia;
+    name_and_bio = artist.bio;
+    artist_name = artist.name;
+    single_html_output = "<div id= \" artist\"> <div class=\"image\"><img src=\" " + image_source + "\"/></div><div class = \"name\"><a href=\" "+ link_source +" \"> \" "+ artist_name +" \"</a></div><div class = \"bio\">" + name_and_bio + "\" </div></div>";
+    entire_html_output = entire_html_output + single_html_output;
+  }
+
+  return entire_html_output;
+
+}
+
 
 
 /* STRETCH 2: Create a function called `randomize` that takes a data array as an argument and returns a the same array in a randomized order. */
